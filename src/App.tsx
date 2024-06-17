@@ -7,6 +7,7 @@ import './App.css';
 import Button from './components/atoms/Button';
 import MenuItemType from './shared/types/common';
 import Select from './components/atoms/Select';
+import Chip from './components/atoms/Chip';
 
 function App() {
 
@@ -38,6 +39,7 @@ function App() {
         <Button name="Login" onClick={() => {}} startIcon={<DeleteIcon />}/>
         <p></p>
         <Select label='Test' options={options}/>
+        <Chip label="Test" color="primary" onDelete={() => {}}/>
       </header>
     </div>
   );
