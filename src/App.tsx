@@ -1,13 +1,16 @@
 import React from 'react';
-import DeleteIcon from '@mui/icons-material/Delete';
+// import DeleteIcon from '@mui/icons-material/Delete';
 import logo from './logo.svg';
 import './App.css';
 
 // components
-import Button from './components/atoms/Button';
+// import Button from './components/atoms/Button';
 import MenuItemType from './shared/types/common';
-import Select from './components/atoms/Select';
+// import Select from './components/atoms/Select';
 import Chip from './components/atoms/Chip';
+import TextInputField from './components/molecules/TextInputField';
+import SelectField from './components/molecules/SelectField';
+
 
 function App() {
 
@@ -36,10 +39,10 @@ function App() {
         >
           Learn React
         </a>
-        <Button name="Login" onClick={() => {}} startIcon={<DeleteIcon />}/>
-        <p></p>
-        <Select label='Test' options={options}/>
         <Chip label="Test" color="primary" onDelete={() => {}}/>
+        <TextInputField label="Test" id="test" required={true} error={false} helperText="Test"/>
+        <br/>
+        <SelectField id="test" label="Test" options={options} required={false} error={false}/>
       </header>
     </div>
   );
