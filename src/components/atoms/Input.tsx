@@ -8,6 +8,12 @@ type Props = {
   disabled?: boolean;
   error?: boolean;
   placeholder?: string;
+  type?: "text" | "password";
+  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onBlur?: (e: React.FocusEvent<HTMLInputElement>) => void;
+  name: string;
+  value: string;
+  autoComplete?: string;
 };
 export default function Input({
   id,
@@ -15,6 +21,12 @@ export default function Input({
   disabled,
   error,
   placeholder,
+  type = "text",
+  onChange,
+  onBlur,
+  name,
+  value,
+  autoComplete = "off",
 }: Props) {
   const BorderInput = styled(InputBase)(({ theme }) => ({
     "& .MuiInputBase-input": {
@@ -45,6 +57,12 @@ export default function Input({
       required={required}
       disabled={disabled}
       placeholder={placeholder}
+      type={type}
+      onChange={onChange}
+      onBlur={onBlur}
+      name={name}
+      value={value}
+      autoComplete={autoComplete}
     />
   );
 }
